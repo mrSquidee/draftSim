@@ -1,5 +1,4 @@
 import json
-import import_ipynb
 import random
 from math import floor
 from player import Player

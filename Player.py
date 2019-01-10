@@ -4,8 +4,12 @@ import csv
 import pandas as pd
 import math
 
-rankings = json.load(open('../cubeRanker/cubeRank.json', encoding='utf-8'))
-# rankings = open('webScrape/cubeTutorRank.csv', r)
+# rankings = json.load(open('../cubeRanker/cubeRank.json', encoding='utf-8'))
+
+with open('cubeTutor.csv', 'r') as csvFile:
+    csvReader = csv.reader(csv_file, delimiter=',')
+    for row in csvReader:
+
 
 class Player():
 
