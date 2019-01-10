@@ -3,13 +3,11 @@ import json
 import csv
 import pandas as pd
 import math
+from pymongo import MongoClient
 
-# rankings = json.load(open('../cubeRanker/cubeRank.json', encoding='utf-8'))
-
-with open('cubeTutor.csv', 'r') as csvFile:
-    csvReader = csv.reader(csv_file, delimiter=',')
-    for row in csvReader:
-
+client = MongoClient("localhost", 27017)
+db = client["cubeRank"]
+cards = client["cards"]
 
 class Player():
 
