@@ -4,6 +4,7 @@ import csv
 import pandas as pd
 import math
 from pymongo import MongoClient
+from mtgsdk import Card
 
 client = MongoClient("localhost", 27017)
 db = client["cubeRank"]
@@ -39,9 +40,8 @@ class Player():
         self.pickFrom = booster
 
     def randPick(self):
-        card = self.pickFrom[random.randint(0, len(self.pickFrom)-1)]
-        self.pickFrom.remove(card)
-        self.pool.append(card)
+        random.shuffle(self.pickFrom)
+        self.pool.append(self.pickFrom.pop())
 
     def update(self):
         total = 0
@@ -68,10 +68,11 @@ class Player():
             if(pip in self.colorR):
                 self.colorR[pip] += recentRank * 0.04;
 
-        for arch in rankings['archetypes']:
-            for i in arch:
-                if(i in recentPick.get('text', '')):
-                    self.arch[arch] += recentRank * 0.02
+        # TODO: add archetypes somewhere
+        # for arch in rankings['archetypes']:
+        #     for i in arch:
+        #         if(i in recentPick.get('text', '')):
+        #             self.arch[arch] += recentRank * 0.02
 
     def addScore(self, card):
         rankAdding = 0
@@ -81,20 +82,21 @@ class Player():
             if(color in self.colorR):
                 rankAdding += self.colorR[color]
 
-        curArch = ''
-        for arch in rankings['archetypes']:
-            for i in arch:
-                if(i in card.get('text', '')):
-                    rankAdding += self.arch[arch]
+        # curArch = ''
+        # for arch in rankings['archetypes']:
+        #     for i in arch:
+        #         if(i in card.get('text', '')):
+        #             rankAdding += self.arch[arch]
 
         return rankAdding
 
     def pick(self):
         best = self.pickFrom[0]
+        print(best)
         cur = self.pickFrom[0]
-        bestRank = rankings['rankings'].get(best['name'], 0)
+        bestRank = db.cards.find_one({'Name':best.name})
         for cur in self.pickFrom:
-            curRank = rankings['rankings'].get(cur['name'], 0)
+            curRank = db.cards.find_one({'Name':cur.name})
             curRank += self.addScore(cur)
             if(curRank >= bestRank):
                 best = cur

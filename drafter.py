@@ -21,7 +21,6 @@ for i in range(0, numPlayers):
 # Fills a slot for a booster
 
 def chooseSlot(slot):
-    print(len(cards))
     random.shuffle(cards)
     cardName = cards.pop()
     card = Card.where(name=cardName)
