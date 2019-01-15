@@ -1,4 +1,5 @@
 from mtgsdk import Card
 
-testCard = Card.find(386616)
-print(testCard)
+testCard = Card.where(name="Attrition").all()
+for i in testCard:
+    print(i.name)

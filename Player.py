@@ -1,7 +1,6 @@
 import random
 import json
 import csv
-import pandas as pd
 import math
 from pymongo import MongoClient
 from mtgsdk import Card

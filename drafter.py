@@ -11,7 +11,8 @@ setData = cube['CUBE']
 cards = []
 with open('miles_cube.txt', 'r') as cubeFile:
     for row in cubeFile:
-        cards.append(row[:-2])
+        cards.append(row[:-1])      
+        
 boosters = [[], [], []]
 numPlayers = 8
 players = []
@@ -23,7 +24,8 @@ for i in range(0, numPlayers):
 def chooseSlot(slot):
     random.shuffle(cards)
     cardName = cards.pop()
-    card = Card.where(name=cardName)
+    card = Card.where(name=cardName).all()
+    print(cardName)
     return card
 
 # Makes a booster by choosing slots
