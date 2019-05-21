@@ -1,0 +1,1903 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+    <script type="text/javascript">
+        var _sf_startpt = (new Date()).getTime()
+    </script>
+    <title>MTG Decks by CanadianHighlanderDatabase — TappedOut.net</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <script type="text/javascript">
+        window.NREUM || (NREUM = {}), __nr_require = function(e, n, t) {
+            function r(t) {
+                if (!n[t]) {
+                    var o = n[t] = {
+                        exports: {}
+                    };
+                    e[t][0].call(o.exports, function(n) {
+                        var o = e[t][1][n];
+                        return r(o || n)
+                    }, o, o.exports)
+                }
+                return n[t].exports
+            }
+            if ("function" == typeof __nr_require) return __nr_require;
+            for (var o = 0; o < t.length; o++) r(t[o]);
+            return r
+        }({
+            1: [function(e, n, t) {
+                function r() {}
+
+                function o(e, n, t) {
+                    return function() {
+                        return i(e, [c.now()].concat(u(arguments)), n ? null : this, t), n ? void 0 : this
+                    }
+                }
+                var i = e("handle"),
+                    a = e(3),
+                    u = e(4),
+                    f = e("ee").get("tracer"),
+                    c = e("loader"),
+                    s = NREUM;
+                "undefined" == typeof window.newrelic && (newrelic = s);
+                var p = ["setPageViewName", "setCustomAttribute", "setErrorHandler", "finished", "addToTrace", "inlineHit", "addRelease"],
+                    d = "api-",
+                    l = d + "ixn-";
+                a(p, function(e, n) {
+                    s[n] = o(d + n, !0, "api")
+                }), s.addPageAction = o(d + "addPageAction", !0), s.setCurrentRouteName = o(d + "routeName", !0), n.exports = newrelic, s.interaction = function() {
+                    return (new r).get()
+                };
+                var m = r.prototype = {
+                    createTracer: function(e, n) {
+                        var t = {},
+                            r = this,
+                            o = "function" == typeof n;
+                        return i(l + "tracer", [c.now(), e, t], r),
+                            function() {
+                                if (f.emit((o ? "" : "no-") + "fn-start", [c.now(), r, o], t), o) try {
+                                    return n.apply(this, arguments)
+                                } catch (e) {
+                                    throw f.emit("fn-err", [arguments, this, e], t), e
+                                } finally {
+                                    f.emit("fn-end", [c.now()], t)
+                                }
+                            }
+                    }
+                };
+                a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","), function(e, n) {
+                    m[n] = o(l + n)
+                }), newrelic.noticeError = function(e, n) {
+                    "string" == typeof e && (e = new Error(e)), i("err", [e, c.now(), !1, n])
+                }
+            }, {}],
+            2: [function(e, n, t) {
+                function r(e, n) {
+                    if (!o) return !1;
+                    if (e !== o) return !1;
+                    if (!n) return !0;
+                    if (!i) return !1;
+                    for (var t = i.split("."), r = n.split("."), a = 0; a < r.length; a++)
+                        if (r[a] !== t[a]) return !1;
+                    return !0
+                }
+                var o = null,
+                    i = null,
+                    a = /Version\/(\S+)\s+Safari/;
+                if (navigator.userAgent) {
+                    var u = navigator.userAgent,
+                        f = u.match(a);
+                    f && u.indexOf("Chrome") === -1 && u.indexOf("Chromium") === -1 && (o = "Safari", i = f[1])
+                }
+                n.exports = {
+                    agent: o,
+                    version: i,
+                    match: r
+                }
+            }, {}],
+            3: [function(e, n, t) {
+                function r(e, n) {
+                    var t = [],
+                        r = "",
+                        i = 0;
+                    for (r in e) o.call(e, r) && (t[i] = n(r, e[r]), i += 1);
+                    return t
+                }
+                var o = Object.prototype.hasOwnProperty;
+                n.exports = r
+            }, {}],
+            4: [function(e, n, t) {
+                function r(e, n, t) {
+                    n || (n = 0), "undefined" == typeof t && (t = e ? e.length : 0);
+                    for (var r = -1, o = t - n || 0, i = Array(o < 0 ? 0 : o); ++r < o;) i[r] = e[n + r];
+                    return i
+                }
+                n.exports = r
+            }, {}],
+            5: [function(e, n, t) {
+                n.exports = {
+                    exists: "undefined" != typeof window.performance && window.performance.timing && "undefined" != typeof window.performance.timing.navigationStart
+                }
+            }, {}],
+            ee: [function(e, n, t) {
+                function r() {}
+
+                function o(e) {
+                    function n(e) {
+                        return e && e instanceof r ? e : e ? f(e, u, i) : i()
+                    }
+
+                    function t(t, r, o, i) {
+                        if (!d.aborted || i) {
+                            e && e(t, r, o);
+                            for (var a = n(o), u = v(t), f = u.length, c = 0; c < f; c++) u[c].apply(a, r);
+                            var p = s[y[t]];
+                            return p && p.push([b, t, r, a]), a
+                        }
+                    }
+
+                    function l(e, n) {
+                        h[e] = v(e).concat(n)
+                    }
+
+                    function m(e, n) {
+                        var t = h[e];
+                        if (t)
+                            for (var r = 0; r < t.length; r++) t[r] === n && t.splice(r, 1)
+                    }
+
+                    function v(e) {
+                        return h[e] || []
+                    }
+
+                    function g(e) {
+                        return p[e] = p[e] || o(t)
+                    }
+
+                    function w(e, n) {
+                        c(e, function(e, t) {
+                            n = n || "feature", y[t] = n, n in s || (s[n] = [])
+                        })
+                    }
+                    var h = {},
+                        y = {},
+                        b = {
+                            on: l,
+                            addEventListener: l,
+                            removeEventListener: m,
+                            emit: t,
+                            get: g,
+                            listeners: v,
+                            context: n,
+                            buffer: w,
+                            abort: a,
+                            aborted: !1
+                        };
+                    return b
+                }
+
+                function i() {
+                    return new r
+                }
+
+                function a() {
+                    (s.api || s.feature) && (d.aborted = !0, s = d.backlog = {})
+                }
+                var u = "nr@context",
+                    f = e("gos"),
+                    c = e(3),
+                    s = {},
+                    p = {},
+                    d = n.exports = o();
+                d.backlog = s
+            }, {}],
+            gos: [function(e, n, t) {
+                function r(e, n, t) {
+                    if (o.call(e, n)) return e[n];
+                    var r = t();
+                    if (Object.defineProperty && Object.keys) try {
+                        return Object.defineProperty(e, n, {
+                            value: r,
+                            writable: !0,
+                            enumerable: !1
+                        }), r
+                    } catch (i) {}
+                    return e[n] = r, r
+                }
+                var o = Object.prototype.hasOwnProperty;
+                n.exports = r
+            }, {}],
+            handle: [function(e, n, t) {
+                function r(e, n, t, r) {
+                    o.buffer([e], r), o.emit(e, n, t)
+                }
+                var o = e("ee").get("handle");
+                n.exports = r, r.ee = o
+            }, {}],
+            id: [function(e, n, t) {
+                function r(e) {
+                    var n = typeof e;
+                    return !e || "object" !== n && "function" !== n ? -1 : e === window ? 0 : a(e, i, function() {
+                        return o++
+                    })
+                }
+                var o = 1,
+                    i = "nr@id",
+                    a = e("gos");
+                n.exports = r
+            }, {}],
+            loader: [function(e, n, t) {
+                function r() {
+                    if (!E++) {
+                        var e = x.info = NREUM.info,
+                            n = l.getElementsByTagName("script")[0];
+                        if (setTimeout(s.abort, 3e4), !(e && e.licenseKey && e.applicationID && n)) return s.abort();
+                        c(y, function(n, t) {
+                            e[n] || (e[n] = t)
+                        }), f("mark", ["onload", a() + x.offset], null, "api");
+                        var t = l.createElement("script");
+                        t.src = "https://" + e.agent, n.parentNode.insertBefore(t, n)
+                    }
+                }
+
+                function o() {
+                    "complete" === l.readyState && i()
+                }
+
+                function i() {
+                    f("mark", ["domContent", a() + x.offset], null, "api")
+                }
+
+                function a() {
+                    return O.exists && performance.now ? Math.round(performance.now()) : (u = Math.max((new Date).getTime(), u)) - x.offset
+                }
+                var u = (new Date).getTime(),
+                    f = e("handle"),
+                    c = e(3),
+                    s = e("ee"),
+                    p = e(2),
+                    d = window,
+                    l = d.document,
+                    m = "addEventListener",
+                    v = "attachEvent",
+                    g = d.XMLHttpRequest,
+                    w = g && g.prototype;
+                NREUM.o = {
+                    ST: setTimeout,
+                    SI: d.setImmediate,
+                    CT: clearTimeout,
+                    XHR: g,
+                    REQ: d.Request,
+                    EV: d.Event,
+                    PR: d.Promise,
+                    MO: d.MutationObserver
+                };
+                var h = "" + location,
+                    y = {
+                        beacon: "bam.nr-data.net",
+                        errorBeacon: "bam.nr-data.net",
+                        agent: "js-agent.newrelic.com/nr-1118.min.js"
+                    },
+                    b = g && w && w[m] && !/CriOS/.test(navigator.userAgent),
+                    x = n.exports = {
+                        offset: u,
+                        now: a,
+                        origin: h,
+                        features: {},
+                        xhrWrappable: b,
+                        userAgent: p
+                    };
+                e(1), l[m] ? (l[m]("DOMContentLoaded", i, !1), d[m]("load", r, !1)) : (l[v]("onreadystatechange", o), d[v]("onload", r)), f("mark", ["firstbyte", u], null, "api");
+                var E = 0,
+                    O = e(5)
+            }, {}]
+        }, {}, ["loader"]);
+    </script>
+    <script type="text/javascript">
+        window.NREUM || (NREUM = {});
+        NREUM.info = {
+            "beacon": "bam.nr-data.net",
+            "queueTime": 0,
+            "licenseKey": "c69c4f8a61",
+            "agent": "",
+            "transactionName": "ZFBaZUVSXUtWWxFfCV0afkRZUEdRWFZKQgdDRV1VGVdWW1wWE18DREYCZERWQXxSWw5gD1ZCFlZSRw==",
+            "applicationID": "80862199",
+            "errorBeacon": "bam.nr-data.net",
+            "applicationTime": 619
+        }
+    </script>
+    <meta content="skvXm5i8y-ydYRYG6QYozxfAiRn4n6V3p0oaO9mgfSM" name="google-site-verification" />
+    <link href="//static.tappedout.net/s/favicon.ico" rel="icon" type="image/jpg" />
+    <link href="//static.tappedout.net/s/webpack/vendor-29e621b67c1c2b46f586-styles.css" rel="stylesheet" type="text/css" />
+    <link href="//static.tappedout.net/s/webpack/tapped-29e621b67c1c2b46f586-styles.css" rel="stylesheet" type="text/css" />
+    <link href="//static.tappedout.net/s/css/glyphicons.files.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="//static.tappedout.net/s/css/glyphicons.social.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="//static.tappedout.net/s/css/glyphicons.pro.css" media="screen" rel="stylesheet" type="text/css" />
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-622331-4', 'auto');
+        ga('send', 'pageview');
+        ga('set', 'anonymizeIp', true);
+    </script>
+    <script type="text/javascript">
+        var STATIC_URL = "//static.tappedout.net/s/";
+    </script>
+    <script src="//static.tappedout.net/s/webpack/vendor.bundle-29e621b67c1c2b46f586.js" type="text/javascript"></script>
+    <script src="//static.tappedout.net/s/webpack/tapped-29e621b67c1c2b46f586.js" type="text/javascript"></script>
+    <script src="//static.tappedout.net/s/bower_components/jquery-tmpl/jquery.tmpl.min.js" type="text/javascript"></script>
+    <script src="//static.tappedout.net/s/js/socket.io-1.3.5.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    </script>
+    <!-- Google Tag Services -->
+    <script>
+        (function() {
+            var gads = document.createElement('script');
+            gads.async = true;
+            gads.type = 'text/javascript';
+            var useSSL = 'https:' == document.location.protocol;
+            gads.src = (useSSL ? 'https:' : 'http:') +
+                '//www.googletagservices.com/tag/js/gpt.js';
+            var node = document.getElementsByTagName('script')[0];
+            node.parentNode.insertBefore(gads, node);
+        })();
+    </script>
+    <!-- ad 1x1 -->
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+
+        googletag.cmd.push(function() {
+            googletag.defineSlot('/12053669/Tapped_Out_1x1_ROS', [1, 1],
+                'div-gpt-ad-1548189991982-0').addService(googletag.pubads());
+        });
+    </script>
+    <script>
+        var PREBID_TIMEOUT = 900;
+        var REFRESH_TIMEOUT = 90000;
+        var GAMCODE = '12053669';
+
+        function computeAdUnits() {
+            var adUnits = [];
+            var w = window;
+            var d = document;
+            var e = d.documentElement;
+            var g = d.getElementsByTagName('body')[0];
+            var browserWidth = w.innerWidth || e.clientWidth || g.clientWidth;
+
+
+            if (browserWidth >= 992) {
+                adUnits.push({
+                    code: 'div-gpt-ad-1491787755236-0',
+                    mediaTypes: {
+                        banner: {
+                            sizes: [
+                                [970, 250],
+                                [970, 90],
+                                [728, 90]
+                            ]
+                        }
+                    },
+                    bids: [{
+                            bidder: 'appnexus',
+                            params: {
+                                placementId: '13105804'
+                            }
+                        },
+                        {
+                            bidder: 'conversant',
+                            params: {
+                                site_id: '121973'
+                            }
+                        },
+                        {
+                            bidder: 'districtm',
+                            params: {
+                                placementId: '13931283'
+                            }
+                        },
+                        {
+                            bidder: 'districtmDMX',
+                            params: {
+                                memberid: '101259',
+                                dmxid: '245172'
+                            }
+                        },
+                        {
+                            bidder: 'ix',
+                            params: {
+                                siteId: '320016',
+                                size: [970, 250]
+                            }
+                        },
+                        {
+                            bidder: 'ix',
+                            params: {
+                                siteId: '320016',
+                                size: [970, 90]
+                            }
+                        },
+                        {
+                            bidder: 'ix',
+                            params: {
+                                siteId: '320016',
+                                size: [728, 90]
+                            }
+                        },
+                        {
+                            bidder: 'sovrn',
+                            params: {
+                                tagid: '589127'
+                            }
+                        }
+                    ]
+                });
+                adUnits.push({
+                    code: 'div-gpt-ad-1491787755236-4',
+                    mediaTypes: {
+                        banner: {
+                            sizes: [
+                                [970, 250],
+                                [970, 90],
+                                [728, 90]
+                            ]
+                        }
+                    },
+                    bids: [{
+                            bidder: 'appnexus',
+                            params: {
+                                placementId: '13931087'
+                            }
+                        },
+                        {
+                            bidder: 'conversant',
+                            params: {
+                                site_id: '121973'
+                            }
+                        },
+                        {
+                            bidder: 'districtm',
+                            params: {
+                                placementId: '13931292'
+                            }
+                        },
+                        {
+                            bidder: 'districtmDMX',
+                            params: {
+                                memberid: '101259',
+                                dmxid: '245175'
+                            }
+                        },
+                        {
+                            bidder: 'ix',
+                            params: {
+                                siteId: '320019',
+                                size: [970, 250]
+                            }
+                        },
+                        {
+                            bidder: 'ix',
+                            params: {
+                                siteId: '320019',
+                                size: [970, 90]
+                            }
+                        },
+                        {
+                            bidder: 'ix',
+                            params: {
+                                siteId: '320019',
+                                size: [728, 90]
+                            }
+                        },
+                        {
+                            bidder: 'sovrn',
+                            params: {
+                                tagid: '589130'
+                            }
+                        }
+                    ]
+                });
+            } else {
+                adUnits.push({
+                    code: 'div-gpt-ad-1491787755236-0',
+                    mediaTypes: {
+                        banner: {
+                            sizes: [
+                                [320, 50]
+                            ],
+                        }
+                    },
+                    bids: [{
+                            bidder: 'appnexus',
+                            params: {
+                                placementId: '13931089'
+                            }
+                        },
+                        {
+                            bidder: 'conversant',
+                            params: {
+                                site_id: '121973'
+                            }
+                        },
+                        {
+                            bidder: 'districtm',
+                            params: {
+                                placementId: '13931297'
+                            }
+                        },
+                        {
+                            bidder: 'districtmDMX',
+                            params: {
+                                memberid: '101259',
+                                dmxid: '245177'
+                            }
+                        },
+                        {
+                            bidder: 'ix',
+                            params: {
+                                siteId: '320021',
+                                size: [320, 50]
+                            }
+                        },
+                        {
+                            bidder: 'sovrn',
+                            params: {
+                                tagid: '589132'
+                            }
+                        }
+                    ]
+                });
+            }
+
+
+            return adUnits;
+        }
+
+        var pbjs = pbjs || {};
+        pbjs.que = pbjs.que || [];
+
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+        googletag.cmd.push(function() {
+            googletag.pubads().disableInitialLoad();
+        });
+
+        pbjs.que.push(function() {
+            pbjs.addAdUnits(computeAdUnits());
+            pbjs.bidderSettings = {
+                standard: {
+                    adserverTargeting: [{
+                            key: "hb_bidder",
+                            val: function(bidResponse) {
+                                return bidResponse.bidderCode;
+                            }
+                        },
+                        {
+                            key: "hb_adid",
+                            val: function(bidResponse) {
+                                return bidResponse.adId;
+                            }
+                        },
+                        {
+                            key: "hb_pb",
+                            val: function(bidResponse) {
+                                var cpm = bidResponse.cpm;
+                                if (cpm > 20.00) {
+                                    return 20.00;
+                                }
+                                return (Math.floor(cpm * 100) / 100).toFixed(2);
+                            }
+                        }
+                    ]
+                },
+            };
+            pbjs.setConfig({
+                enableSendAllBids: false
+            });
+
+            pbjs.requestBids({
+                bidsBackHandler: sendAdserverRequest
+            });
+
+        });
+
+        function sendAdserverRequest() {
+            if (pbjs.adserverRequestSent) return;
+            pbjs.adserverRequestSent = true;
+            googletag.cmd.push(function() {
+                pbjs.que.push(function() {
+                    pbjs.setTargetingForGPTAsync();
+                    googletag.pubads().refresh();
+                    googletag.pubads().addEventListener("slotRenderEnded",
+                        function(event) {
+                            if (!event.isEmpty && event.slot.getSlotElementId() === "div-gpt-ad-1491787755236-0") {
+                                $('.banner-ad').css('height', $('.banner-ad iframe').height() + 'px');
+                            }
+                        }
+                    );
+                });
+            });
+        }
+
+
+        setTimeout(sendAdserverRequest, PREBID_TIMEOUT);
+
+
+        var googleSlots = [];
+
+        googletag.cmd.push(function() {
+            var w = window;
+            var d = document;
+            var e = d.documentElement;
+            var g = d.getElementsByTagName('body')[0];
+            var browserWidth = w.innerWidth || e.clientWidth || g.clientWidth;
+            var browserHeight = w.innerHeight || e.clientHeight || g.clientHeight;
+            var slot, slotCode, slotName;
+
+
+            if (browserWidth >= 992 && browserHeight >= 0) {
+                slotName = '/' + GAMCODE + '/Tapped_Out_728x90_ROS';
+                slotCode = 'div-gpt-ad-1491787755236-0';
+                slot = googletag.defineSlot(slotName, [
+                        [970, 250],
+                        [970, 90],
+                        [728, 90]
+                    ],
+                    slotCode).setTargeting().addService(googletag.pubads());
+                googleSlots.push({
+                    code: slotCode,
+                    name: slotName,
+                    slot: slot,
+                    wasSeen: false
+                });
+
+                slotName = '/' + GAMCODE + '/Tapped_Out_728x90_BTF';
+                slotCode = 'div-gpt-ad-1491787755236-4';
+                slot = googletag.defineSlot(slotName, [
+                        [970, 250],
+                        [970, 90],
+                        [728, 90]
+                    ],
+                    slotCode).setTargeting().addService(googletag.pubads());
+                googleSlots.push({
+                    code: slotCode,
+                    name: slotName,
+                    slot: slot,
+                    wasSeen: false
+                });
+            } else {
+                slotName = '/' + GAMCODE + '/Tapped_Out_728x90_ROS';
+                slotCode = 'div-gpt-ad-1491787755236-0';
+                slot = googletag.defineSlot(slotName, [
+                        [320, 50]
+                    ],
+                    slotCode).setTargeting().addService(googletag.pubads());
+                googleSlots.push({
+                    code: slotCode,
+                    name: slotName,
+                    slot: slot,
+                    wasSeen: false
+                });
+            }
+
+
+            googletag.pubads().setTargeting();
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+
+
+        googletag.cmd.push(function() {
+            googletag.display('div-gpt-ad-1491787755236-0');
+        });
+
+
+        function refreshBids() {
+            pbjs.que.push(function() {
+                pbjs.requestBids({
+                    timeout: PREBID_TIMEOUT,
+                    bidsBackHandler: function() {
+                        pbjs.setTargetingForGPTAsync();
+                        googletag.pubads().refresh();
+                    }
+                });
+            });
+            setTimeout(refreshBids, REFRESH_TIMEOUT);
+        }
+
+
+        setTimeout(refreshBids, REFRESH_TIMEOUT);
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            if (window.getCookie('tos-accepted') != '2018a') {
+                $('#gdpr-navbar').removeClass('hidden');
+            }
+            $('#tos-accept').click(function(e) {
+                $('#gdpr-navbar').addClass('hidden');
+                window.setCookie('tos-accepted', '2018a', 365)
+            });
+
+
+
+            $(".prompt").click(function(e) {
+                confirmation = confirm($(this).data('prompt'));
+                return confirmation;
+            });
+            $(".delete").click(function(e) {
+                confirmation = confirm("Are you sure you want to delete this item?");
+                return confirmation;
+            });
+
+            function adBlockDetected() {
+                ga('set', 'dimension1', 1);
+                if (window.getCookie('adblocker') != "1") {
+                    window.setCookie('adblocker', 1, 1);
+                }
+            }
+
+            function adBlockNotDetected() {
+                ga('set', 'dimension1', 0);
+                if (window.getCookie('adblocker') == "1") {
+                    window.setCookie('adblocker', 0, 1);
+                }
+            }
+            if (typeof fuckAdBlock === 'undefined') {
+                adBlockDetected();
+            } else {
+                fuckAdBlock.onDetected(adBlockDetected);
+                fuckAdBlock.onNotDetected(adBlockNotDetected);
+            }
+            CORE.initResponsiveImages();
+            CORE.initResponsiveEmbed();
+            REACTIONS.initialize();
+
+            $("#id_action").addClass("form-control")
+
+
+
+            TAPPED.observeCards({
+                vendors: ['TCG', 'CH']
+            });
+
+
+            TAPPED.initSpoiler();
+
+        });
+        $(document).on('click', ".broadcast-clicker", function(e) {
+            //close the notifs modal in case clicking from a notification
+            $("#notifications").modal('hide')
+            e.preventDefault();
+        });
+        $(document).on('click', ".mark-chat-read-clicker", function() {
+            var other = $(this).data("other");
+            $.ajax({
+                url: "/pm/api/mark-read/",
+                data: {
+                    "other_user": other
+                },
+                dataType: "json",
+                type: 'POST',
+                success: function(data) {
+                    $("#chat-notif-" + other).remove();
+                    $("#unread-badge-" + other).remove();
+                    if ($("#chat-modal-body .row").length == 1) {
+                        $("#chat-modal-message").removeClass("hidden");
+                    }
+                    var bdg = $("#unread-badge");
+                    var new_val = parseInt(bdg.html()) - 1;
+                    if (new_val > 0) {
+                        bdg.html(new_val)
+                    } else {
+                        bdg.remove()
+                    }
+                }
+            });
+        });
+    </script>
+    <style>
+        select.tappedout_sorter {
+            width: auto !important;
+        }
+    </style>
+    </meta>
+</head>
+
+<body class="site-tappedout" id="sitebody">
+    <!-- /12053669/Tapped_Out_1x1_ROS -->
+    <div id="div-gpt-ad-1548189991982-0" style="height:1px; width:1px;"></div>
+    <div id="main-content">
+        <nav class="navbar navbar-inverse navbar-fixed-top tapped-menu-navbar bottom-divider" role="navigation">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="pull-left">
+                            <div class="navbar-header visible-xs">
+                                <button class="navbar-toggle" data-target="#navbar" data-toggle="collapse" type="button">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand" href="/">T/O</a>
+                            </div>
+                            <div class="collapse navbar-collapse main-nav-collapse" id="navbar">
+                                <div class="col-xs-12">
+                                    <ul class="nav navbar-nav main-nav">
+                                        <li class="hidden-xs">
+                                            <a class="hidden-xs hidden-sm to-logo" href="/">
+                                                <img src="//static.tappedout.net/s/img/2017-4.png" />
+                                            </a>
+                                            <a class="visible-sm to-logo" href="/">
+                                                <img src="//static.tappedout.net/s/img/2017-4-sm.png" />
+                                            </a>
+                                        </li>
+                                        <li><a href="/mtg-deck-builder/">Deck Builder</a></li>
+                                        <li><a href="/magic-cards/"> Cards</a></li>
+                                        <!--
+                                            
+                                            
+                                            <li><a href='/mtg-set/dominaria-spoiler/'>DOM 270/269</a>
+                                            
+                                            
+                                            -->
+                                        <li><a href="/meets/">Events</a></li>
+                                        <li><a href="/mtg-draft-simulator/" title="MTG Draft Simulator">Draft Sim</a></li>
+                                        <li><a href="/mtg-cube-drafts/">Cubes</a></li>
+                                        <li><a href="/mtg-forum/" title="MTG Forums">Forums</a></li>
+                                        <li><a href="/mtg-questions/" title="MTG Questions">Rules Q&amp;A</a></li>
+                                        <li class="hidden-ssm"><a href="/community/" title="Community">Community</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pull-right">
+                            <div class="navbar-header">
+                                <ul class="nav navbar-nav icons-navbar" data-no-collapse="true" id="iconz">
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                            <span class="glyphicon glyphicon-search"></span>
+                                        </a>
+                                        <ul class="dropdown-menu tapped-menu left-menu">
+                                            <li>
+                                                <form action="/search/" class="navbar-form" method="GET">
+                                                    <input id="q" name="q" placeholder="Search" type="text" />
+                                                </form>
+                                            </li>
+                                            <li><a href="/mtg-cards/search/">Card search</a></li>
+                                            <li><a href="/mtg-decks/search/">Deck search</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="no-icon-item"><a href="/accounts/login/?next=/users/CanadianHighlanderDatabase/mtg-decks/">login</a></li>
+                                    <li class="no-icon-item accent"><a href="/accounts/register/?next=/users/CanadianHighlanderDatabase/mtg-decks/">sign-up</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div id="body">
+            <div class="bottom-divider" id="desktop">
+                <div class="container" style="display:table;">
+                    <div class="row banner-ad">
+                        <div class="col-lg-12">
+                            <div class="text-center" id="div-gpt-ad-1491787755236-0"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="broadcastModal" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div class="modal-title">
+                                <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-remove"></span></button>
+                                <ul class="nav nav-pills" role="tablist">
+                                    <li class="active" role="presentation">
+                                        <a data-toggle="tab" href="#broadcastModal-broadcastParent" role="tab">Broadcasts (<span id="broadcastCount">...</span>)</a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a data-toggle="tab" href="#broadcastModal-friendsParent" role="tab">Friends (<span id="friendsCount">...</span>)</a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a data-toggle="tab" href="#broadcastModal-eventParent" role="tab">Events (<span id="eventCount">...</span>)</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="modal-body">
+                            <div role="tabpanel">
+                                <div class="tab-content">
+                                    <div class="active tab-pane" id="broadcastModal-broadcastParent" role="tabpanel">
+                                        <h3>Broadcast and play with locals</h3>
+                                        <p>Broadcasting is a way to meet up and play with people in your area. Location services must be turned on for this site on your browser (a prompt should appear).</p>
+                                        <p>Please do not use this feature if you own a fake ice cream truck</p>
+                                        <div class="broadcastModal-flash">
+                                            <h4>Waiting for location permission...</h4>
+                                        </div>
+                                        <a class="btn btn-sm btn-warning add-broadcast-button hide" data-toggle="collapse" href="#broadcastModal-form">
+                                            <span class="glyphpro glyphpro-wifi_alt"></span>
+
+                                            Login to Broadcast
+
+                                        </a>
+                                        <div class="collapse" id="broadcastModal-form">
+                                        </div>
+                                        <hr />
+                                        <div id="broadcastModal-broadcastResults">
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="broadcastModal-friendsParent" role="tabpanel">
+                                        <h3>Broadcast and play with friends</h3>
+                                        <p>You can send a private broadcast to meet up and play with your friends.</p>
+                                        <a class="btn btn-sm btn-warning" data-toggle="collapse" href="#broadcastModal-friendsForm">
+                                            <span class="glyphpro glyphpro-wifi_alt"></span>
+
+                                            Login to Broadcast
+
+                                        </a>
+                                        <div class="collapse" id="broadcastModal-friendsForm">
+                                        </div>
+                                        <hr />
+                                        <div id="broadcastModal-friendsResults">
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="broadcastModal-eventParent" role="tabpanel">
+                                        <div class="broadcastModal-flash">
+                                            <h4>Waiting for location permission...</h4>
+                                        </div>
+                                        <div id="broadcastModal-eventResults"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <a class="btn btn-sm btn-default" data-dismiss="modal" href="#">Close</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script id="broadcastModal-broadcastResult" type="text/x-jquery-tmpl">
+                {{if !results.length}}
+                <p>
+                    {{if last_broadcast}}
+                    Last broadcast ended ${last_broadcast} ago. Start one!
+                    {{else}}
+                        Nobody currently broadcasting. Start one!
+                        {{/if}}
+                </p>
+                {{/if}}
+                <div class="panel panel-default">
+                    {{each(i, bc) results}}
+                    <div class="panel-heading" role="tab" id="broadcastModal-broadcastResults-${bc.id}">
+                        <h4 class="panel-title">
+                            {{html bc.user.display_name}}
+                            {{if bc.venue != null}}
+                            - ${bc.venue.name}, ${bc.venue.city}
+                            {{/if}}
+
+                            {{if authenticated}}
+                            <a class="btn btn-success btn-xs {{if bc.joined}}hide{{/if}}" id="join-${bc.id}" href="javascript:void()">Join</a>
+                            <a class="btn btn-danger btn-xs {{if !bc.joined}}hide{{/if}}" id="leave-${bc.id}" href="javascript:void()">Leave</a>
+                            {{/if}}
+                        </h4>
+                    </div>
+                    <div id="collapse${bc.id}" class="" aria-labelledby="heading${bc.id}">
+                        <div class="panel-body broadcast-panel-body">
+                            {{html bc.description_parsed}}
+                            <p><small>
+                                    ${bc.created} | ${bc.views} views | <a data-toggle="collapse" href="#followers${bc.id}">${bc.followers.length} joined</a>
+                                </small></p>
+                            <p class="collapse" id="followers${id}">
+                                {{each bc.followers}}
+                                {{html $value.display_name }}
+                                {{/each}}
+                            </p>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </script>
+            <script id="broadcastModal-eventResult" type="text/x-jquery-tmpl">
+                {{if !results.length}}
+                <p>No upcoming events near you</p>
+                {{/if}}
+                <div class="panel panel-default">
+                    {{each(i, e) results}}
+                    <div class="panel-heading" role="tab" id="broadcastModal-eventResult-${e.id}">
+                        <h4 class="panel-title">
+                            <a href="${e.venue.local_url}">${e.venue.name}</a> - ${e.date}
+                            {{if authenticated}}
+                            <a class="btn btn-success btn-xs {{if e.venue.joined}}hide{{/if}}" id="join-${e.id}" href="javascript:void()">Join</a>
+                            <a class="btn btn-danger btn-xs {{if !e.venue.joined}}hide{{/if}}" id="leave-${e.id}" href="javascript:void()">Leave</a>
+                            {{/if}}
+                        </h4>
+                    </div>
+                    <div id="collapse${e.id}" class="" aria-labelledby="heading${e.id}">
+                        <div class="panel-body broadcast-panel-body">
+                            {{html e.description_parsed}}
+                            <p><small>
+                                    <a data-toggle="collapse" href="#followers${e.id}">${e.venue.followers.length} joined</a>
+                                </small></p>
+                            <p class="collapse" id="followers${id}">
+                                {{each e.venue.followers}}
+                                {{html $value.display_name }}
+                                {{/each}}
+                            </p>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </script>
+            <div class="navbar navbar-fixed-bottom hidden" id="gdpr-navbar" role="dialog" tabindex="-1">
+                <div class="container">
+                    <div class="row well well-sm">
+                        <div class="col-lg-12 col-xs-12" style="font-size: 12px">
+                            <p>This site uses Cookies for basic functionality for visitors who have accounts with us. Also, our trusted and reputable third party advertisers use cookies to determine which ads to serve.</p>
+                            <p>We care a lot about your privacy and making sure that your experience on this site is a safe one, and in that effort we store as little information as possible. You can read more about that in our <a href="/gdpr-statement/">2018 GDPR statement here.</a></p>
+                            <p>Please accept our terms of use which <a href="/terms-of-use/">can be found here</a>. If you have any questions, or you do not agree and would like us to opt you out, please contact us using the <a href="/feedback/">contact form</a>.</p>
+                            <p>
+                                <button class="btn btn-xs btn-success" id="tos-accept">I accept the terms of use</button>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+            </div>
+            <div class="container margin-top-18">
+                <ul class="pagination">
+                    <li><a href="?&amp;p=1&amp;page=1">Page 1</a></li>
+                    <li><a href="?&amp;p=2&amp;page=2">2</a></li>
+                    <li><a href="?&amp;p=3&amp;page=3">3</a></li>
+                    <li><a href="#">...</a></li>
+                    <li><a href="?&amp;p=5&amp;page=5">5</a></li>
+                    <li><a href="?&amp;p=6&amp;page=6">6</a></li>
+                    <li><a href="?&amp;p=7&amp;page=7">7</a></li>
+                    <li class="active"><a href="?&amp;p=8&amp;page=8">8</a></li>
+                    <li><a href="?&amp;p=9&amp;page=9">9</a></li>
+                    <li><a href="?&amp;p=10&amp;page=10">10</a></li>
+                    <li><a href="#">...</a></li>
+                    <li><a href="?&amp;p=57&amp;page=57">57</a></li>
+                </ul>
+                <form action="." method="post"><input name="csrfmiddlewaretoken" type="hidden" value="8HKxxp0HAKFRnBAX8nYklIjdoWb3hM6SgXGYAaadVNMBUCyt6QGEVhCFHklNJ0tY">
+                    <div class="row">
+                        <div class="col-lg-12">
+                        </div>
+                    </div>
+                    <div class="well">
+                        <div class="row">
+                            <div align="center" class="col-sm-2 col-xs-3 col-md-2 col-lg-2 contents deck-wide-chart">
+                                <a href="/mtg-decks/2018-championship-9th-16th-mardu-midrange/"><img alt="deck chart" class="chart deck-chart" src="//static.tappedout.net/chart/30-0-35-30-5.png" /></a>
+                            </div>
+                            <div class="col-sm-5 col-xs-9 col-md-5 col-lg-5 contents">
+                                <h3 class="name deck-wide-header"><a href="/mtg-decks/2018-championship-9th-16th-mardu-midrange/" title="mtg decks - 2018 Championship - 9th-16th - Mardu Midrange">2018 Championship - 9th-16th - Mardu Midrange </a></h3>
+                                <a href="/users/CanadianHighlanderDatabase/">CanadianHighlanderDatabase</a>
+                            </div>
+                            <div class="contents col-xs-12 col-sm-5">
+                                <div class="row">
+                                    <div class="col-sm-12 hidden-xs">
+                                        <h5 class="deck-wide-header">
+                                            <a href="/mtg-deck-builder/canadian-highlander-decks/">Canadian Highlander</a>
+                                        </h5>
+                                    </div>
+                                    <div class="col-xs-3 visible-xs deck-wide-badge">
+                                        <span class="badge fmt-chl badge-tiny">CHL</span>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-12 hidden-xs">
+                                        <h5 class="deck-wide-header" style="color:gray">
+                                            <a href="/mtg-deck-builder/aggro-decks/">Aggro</a>
+
+                                            |
+                                            <a href="/mtg-deck-builder/midrange-decks/">Midrange</a>
+
+                                            |
+                                            <a href="/mtg-deck-builder/rbw-decks/">RBW (Mardu)</a>
+                                        </h5>
+                                    </div>
+                                    <div class="col-xs-9 col-sm-12 deck-wide-stats">
+                                        <span class="glyphicon glyphicon-level-up" style="margin:0px -3px 0px 8px"></span>
+                                        1
+
+
+
+
+
+                                        <span class="glyphicon glyphicon-eye-open" style="margin:0px -2px 0px 8px"></span>
+                                        51
+
+
+                                        <span class="deck-price-range">$$$$$</span>
+                                    </div>
+                                    <div class="col-sm-12 hidden-xs">
+                                        <h5 style="color:gray">
+                                            Updated 3 weeks ago.
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="well">
+                        <div class="row">
+                            <div align="center" class="col-sm-2 col-xs-3 col-md-2 col-lg-2 contents deck-wide-chart">
+                                <a href="/mtg-decks/2018-championship-9th-16th-grixis-control/"><img alt="deck chart" class="chart deck-chart" src="//static.tappedout.net/chart/0-65-10-25-0.png" /></a>
+                            </div>
+                            <div class="col-sm-5 col-xs-9 col-md-5 col-lg-5 contents">
+                                <h3 class="name deck-wide-header"><a href="/mtg-decks/2018-championship-9th-16th-grixis-control/" title="mtg decks - 2018 Championship - 9th-16th - Grixis Control">2018 Championship - 9th-16th - Grixis Control </a></h3>
+                                <a href="/users/CanadianHighlanderDatabase/">CanadianHighlanderDatabase</a>
+                            </div>
+                            <div class="contents col-xs-12 col-sm-5">
+                                <div class="row">
+                                    <div class="col-sm-12 hidden-xs">
+                                        <h5 class="deck-wide-header">
+                                            <a href="/mtg-deck-builder/canadian-highlander-decks/">Canadian Highlander</a>
+                                        </h5>
+                                    </div>
+                                    <div class="col-xs-3 visible-xs deck-wide-badge">
+                                        <span class="badge fmt-chl badge-tiny">CHL</span>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-12 hidden-xs">
+                                        <h5 class="deck-wide-header" style="color:gray">
+                                            <a href="/mtg-deck-builder/control-decks/">Control</a>
+
+                                            |
+                                            <a href="/mtg-deck-builder/midrange-decks/">Midrange</a>
+
+                                            |
+                                            <a href="/mtg-deck-builder/ubr-decks/">U/B/R (Grixis)</a>
+                                        </h5>
+                                    </div>
+                                    <div class="col-xs-9 col-sm-12 deck-wide-stats">
+                                        <span class="glyphicon glyphicon-level-up" style="margin:0px -3px 0px 8px"></span>
+                                        1
+
+
+
+
+
+                                        <span class="glyphicon glyphicon-eye-open" style="margin:0px -2px 0px 8px"></span>
+                                        44
+
+
+                                        <span class="deck-price-range">$$$$$</span>
+                                    </div>
+                                    <div class="col-sm-12 hidden-xs">
+                                        <h5 style="color:gray">
+                                            Updated 3 weeks ago.
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="well">
+                        <div class="row">
+                            <div align="center" class="col-sm-2 col-xs-3 col-md-2 col-lg-2 contents deck-wide-chart">
+                                <a href="/mtg-decks/2018-championship-9th-16th-gruul-blitz/"><img alt="deck chart" class="chart deck-chart" src="//static.tappedout.net/chart/5-0-5-60-30.png" /></a>
+                            </div>
+                            <div class="col-sm-5 col-xs-9 col-md-5 col-lg-5 contents">
+                                <h3 class="name deck-wide-header"><a href="/mtg-decks/2018-championship-9th-16th-gruul-blitz/" title="mtg decks - 2018 Championship - 9th-16th - Gruul Blitz">2018 Championship - 9th-16th - Gruul Blitz </a></h3>
+                                <a href="/users/CanadianHighlanderDatabase/">CanadianHighlanderDatabase</a>
+                            </div>
+                            <div class="contents col-xs-12 col-sm-5">
+                                <div class="row">
+                                    <div class="col-sm-12 hidden-xs">
+                                        <h5 class="deck-wide-header">
+                                            <a href="/mtg-deck-builder/canadian-highlander-decks/">Canadian Highlander</a>
+                                        </h5>
+                                    </div>
+                                    <div class="col-xs-3 visible-xs deck-wide-badge">
+                                        <span class="badge fmt-chl badge-tiny">CHL</span>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-12 hidden-xs">
+                                        <h5 class="deck-wide-header" style="color:gray">
+                                            <a href="/mtg-deck-builder/aggro-decks/">Aggro</a>
+
+                                            |
+                                            <a href="/mtg-deck-builder/rg-decks/">RG (Gruul)</a>
+
+                                            |
+                                            <a href="/mtg-deck-builder/zoo-decks/">Zoo</a>
+                                        </h5>
+                                    </div>
+                                    <div class="col-xs-9 col-sm-12 deck-wide-stats">
+                                        <span class="glyphicon glyphicon-level-up" style="margin:0px -3px 0px 8px"></span>
+                                        1
+
+
+
+
+
+                                        <span class="glyphicon glyphicon-eye-open" style="margin:0px -2px 0px 8px"></span>
+                                        61
+
+
+                                        <span class="deck-price-range">$$$$</span>
+                                    </div>
+                                    <div class="col-sm-12 hidden-xs">
+                                        <h5 style="color:gray">
+                                            Updated 3 weeks ago.
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="well">
+                        <div class="row">
+                            <div align="center" class="col-sm-2 col-xs-3 col-md-2 col-lg-2 contents deck-wide-chart">
+                                <a href="/mtg-decks/2018-championship-9th-16th-jeskai-control/"><img alt="deck chart" class="chart deck-chart" src="//static.tappedout.net/chart/15-60-0-25-0.png" /></a>
+                            </div>
+                            <div class="col-sm-5 col-xs-9 col-md-5 col-lg-5 contents">
+                                <h3 class="name deck-wide-header"><a href="/mtg-decks/2018-championship-9th-16th-jeskai-control/" title="mtg decks - 2018 Championship - 9th-16th - Jeskai Control">2018 Championship - 9th-16th - Jeskai Control </a></h3>
+                                <a href="/users/CanadianHighlanderDatabase/">CanadianHighlanderDatabase</a>
+                            </div>
+                            <div class="contents col-xs-12 col-sm-5">
+                                <div class="row">
+                                    <div class="col-sm-12 hidden-xs">
+                                        <h5 class="deck-wide-header">
+                                            <a href="/mtg-deck-builder/canadian-highlander-decks/">Canadian Highlander</a>
+                                        </h5>
+                                    </div>
+                                    <div class="col-xs-3 visible-xs deck-wide-badge">
+                                        <span class="badge fmt-chl badge-tiny">CHL</span>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-12 hidden-xs">
+                                        <h5 class="deck-wide-header" style="color:gray">
+                                            <a href="/mtg-deck-builder/control-decks/">Control</a>
+
+                                            |
+                                            <a href="/mtg-deck-builder/midrange-decks/">Midrange</a>
+
+                                            |
+                                            <a href="/mtg-deck-builder/ruw-decks/">RUW (Jeskai, America)</a>
+
+                                            |
+                                            <a href="/mtg-deck-builder/ur-decks/">U/R (Izzet)</a>
+                                        </h5>
+                                    </div>
+                                    <div class="col-xs-9 col-sm-12 deck-wide-stats">
+                                        <span class="glyphicon glyphicon-level-up" style="margin:0px -3px 0px 8px"></span>
+                                        1
+
+
+
+
+
+                                        <span class="glyphicon glyphicon-eye-open" style="margin:0px -2px 0px 8px"></span>
+                                        40
+
+
+                                        <span class="deck-price-range">$$$$$</span>
+                                    </div>
+                                    <div class="col-sm-12 hidden-xs">
+                                        <h5 style="color:gray">
+                                            Updated 3 weeks ago.
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="well">
+                        <div class="row">
+                            <div align="center" class="col-sm-2 col-xs-3 col-md-2 col-lg-2 contents deck-wide-chart">
+                                <a href="/mtg-decks/jeskai-control-updated-dec-24th-2018/"><img alt="deck chart" class="chart deck-chart" src="//static.tappedout.net/chart/25-50-0-20-5.png" /></a>
+                            </div>
+                            <div class="col-sm-5 col-xs-9 col-md-5 col-lg-5 contents">
+                                <h3 class="name deck-wide-header"><a href="/mtg-decks/jeskai-control-updated-dec-24th-2018/" title="mtg decks - Jeskai Control - Updated Dec. 24th, 2018">Jeskai Control - Updated Dec. 24th, 2018 </a></h3>
+                                <a href="/users/CanadianHighlanderDatabase/">CanadianHighlanderDatabase</a>
+                            </div>
+                            <div class="contents col-xs-12 col-sm-5">
+                                <div class="row">
+                                    <div class="col-sm-12 hidden-xs">
+                                        <h5 class="deck-wide-header">
+                                            <a href="/mtg-deck-builder/canadian-highlander-decks/">Canadian Highlander</a>
+                                        </h5>
+                                    </div>
+                                    <div class="col-xs-3 visible-xs deck-wide-badge">
+                                        <span class="badge fmt-chl badge-tiny">CHL</span>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-12 hidden-xs">
+                                        <h5 class="deck-wide-header" style="color:gray">
+                                            <a href="/mtg-deck-builder/control-decks/">Control</a>
+
+                                            |
+                                            <a href="/mtg-deck-builder/midrange-decks/">Midrange</a>
+
+                                            |
+                                            <a href="/mtg-deck-builder/ruw-decks/">RUW (Jeskai, America)</a>
+
+                                            |
+                                            <a href="/mtg-deck-builder/ur-decks/">U/R (Izzet)</a>
+
+                                            |
+                                            <a href="/mtg-deck-builder/wu-decks/">W/U (Azorius)</a>
+                                        </h5>
+                                    </div>
+                                    <div class="col-xs-9 col-sm-12 deck-wide-stats">
+                                        <span class="glyphicon glyphicon-level-up" style="margin:0px -3px 0px 8px"></span>
+                                        4
+
+
+                                        <span class="glyphicon glyphicon-arrow-up" style="margin:0px -3px 0px 6px"></span>
+                                        2
+
+
+
+
+
+                                        <span class="glyphicon glyphicon-eye-open" style="margin:0px -2px 0px 8px"></span>
+                                        1041
+
+
+                                        <span class="deck-price-range">$$$$$</span>
+                                    </div>
+                                    <div class="col-sm-12 hidden-xs">
+                                        <h5 style="color:gray">
+                                            Updated 3 weeks ago.
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="well">
+                        <div class="row">
+                            <div align="center" class="col-sm-2 col-xs-3 col-md-2 col-lg-2 contents deck-wide-chart">
+                                <a href="/mtg-decks/warriors-updated-jan-29th-2019/"><img alt="deck chart" class="chart deck-chart" src="//static.tappedout.net/chart/15-0-15-35-35.png" /></a>
+                            </div>
+                            <div class="col-sm-5 col-xs-9 col-md-5 col-lg-5 contents">
+                                <h3 class="name deck-wide-header"><a href="/mtg-decks/warriors-updated-jan-29th-2019/" title="mtg decks - Warriors - Updated Jan. 29th, 2019">Warriors - Updated Jan. 29th, 2019 </a></h3>
+                                <a href="/users/CanadianHighlanderDatabase/">CanadianHighlanderDatabase</a>
+                            </div>
+                            <div class="contents col-xs-12 col-sm-5">
+                                <div class="row">
+                                    <div class="col-sm-12 hidden-xs">
+                                        <h5 class="deck-wide-header">
+                                            <a href="/mtg-deck-builder/canadian-highlander-decks/">Canadian Highlander</a>
+                                        </h5>
+                                    </div>
+                                    <div class="col-xs-3 visible-xs deck-wide-badge">
+                                        <span class="badge fmt-chl badge-tiny">CHL</span>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-12 hidden-xs">
+                                        <h5 class="deck-wide-header" style="color:gray">
+                                            <a href="/mtg-deck-builder/aggro-decks/">Aggro</a>
+
+                                            |
+                                            <a href="/mtg-deck-builder/bgw-decks/">BGW (Abzan, Junk)</a>
+
+                                            |
+                                            <a href="/mtg-deck-builder/brg-decks/">BRG (Jund)</a>
+
+                                            |
+                                            <a href="/mtg-deck-builder/rbw-decks/">RBW (Mardu)</a>
+
+                                            |
+                                            <a href="/mtg-deck-builder/rgw-decks/">RGW (Naya)</a>
+
+                                            |
+                                            <a href="/mtg-deck-builder/tribal-decks/">Tribal</a>
+                                        </h5>
+                                    </div>
+                                    <div class="col-xs-9 col-sm-12 deck-wide-stats">
+                                        <span class="glyphicon glyphicon-level-up" style="margin:0px -3px 0px 8px"></span>
+                                        2
+
+
+                                        <span class="glyphicon glyphicon-arrow-up" style="margin:0px -3px 0px 6px"></span>
+                                        1
+
+
+
+
+
+                                        <span class="glyphicon glyphicon-eye-open" style="margin:0px -2px 0px 8px"></span>
+                                        170
+
+
+                                        <span class="deck-price-range">$$$$$</span>
+                                    </div>
+                                    <div class="col-sm-12 hidden-xs">
+                                        <h5 style="color:gray">
+                                            Updated 3 weeks ago.
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="well">
+                        <div class="row">
+                            <div align="center" class="col-sm-2 col-xs-3 col-md-2 col-lg-2 contents deck-wide-chart">
+                                <a href="/mtg-decks/4c-counters-jan-28th-2019/"><img alt="deck chart" class="chart deck-chart" src="//static.tappedout.net/chart/25-10-20-0-45.png" /></a>
+                            </div>
+                            <div class="col-sm-5 col-xs-9 col-md-5 col-lg-5 contents">
+                                <h3 class="name deck-wide-header"><a href="/mtg-decks/4c-counters-jan-28th-2019/" title="mtg decks - 4C Counters - Jan. 28th, 2019">4C Counters - Jan. 28th, 2019 </a></h3>
+                                <a href="/users/CanadianHighlanderDatabase/">CanadianHighlanderDatabase</a>
+                            </div>
+                            <div class="contents col-xs-12 col-sm-5">
+                                <div class="row">
+                                    <div class="col-sm-12 hidden-xs">
+                                        <h5 class="deck-wide-header">
+                                            <a href="/mtg-deck-builder/canadian-highlander-decks/">Canadian Highlander</a>
+                                        </h5>
+                                    </div>
+                                    <div class="col-xs-3 visible-xs deck-wide-badge">
+                                        <span class="badge fmt-chl badge-tiny">CHL</span>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-12 hidden-xs">
+                                        <h5 class="deck-wide-header" style="color:gray">
+                                            <a href="/mtg-deck-builder/bgw-decks/">BGW (Abzan, Junk)</a>
+
+                                            |
+                                            <a href="/mtg-deck-builder/gub-decks/">BUG (Sultai)</a>
+
+                                            |
+                                            <a href="/mtg-deck-builder/counters-decks/">Counters</a>
+
+                                            |
+                                            <a href="/mtg-deck-builder/four-color-decks/">Four Color</a>
+
+                                            |
+                                            <a href="/mtg-deck-builder/gwu-decks/">GWU (Bant)</a>
+                                        </h5>
+                                    </div>
+                                    <div class="col-xs-9 col-sm-12 deck-wide-stats">
+                                        <span class="glyphicon glyphicon-level-up" style="margin:0px -3px 0px 8px"></span>
+                                        2
+
+
+
+
+
+                                        <span class="glyphicon glyphicon-eye-open" style="margin:0px -2px 0px 8px"></span>
+                                        368
+
+
+                                        <span class="deck-price-range">$$$$$</span>
+                                    </div>
+                                    <div class="col-sm-12 hidden-xs">
+                                        <h5 style="color:gray">
+                                            Updated 4 weeks ago.
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="well">
+                        <div class="row">
+                            <div align="center" class="col-sm-2 col-xs-3 col-md-2 col-lg-2 contents deck-wide-chart">
+                                <a href="/mtg-decks/death-taxes-sample-archetypes/"><img alt="deck chart" class="chart deck-chart" src="//static.tappedout.net/chart/85-0-5-0-5-5.png" /></a>
+                            </div>
+                            <div class="col-sm-5 col-xs-9 col-md-5 col-lg-5 contents">
+                                <h3 class="name deck-wide-header"><a href="/mtg-decks/death-taxes-sample-archetypes/" title="mtg decks - Death &amp; Taxes - Sample Archetypes">Death &amp; Taxes - Sample Archetypes </a></h3>
+                                <a href="/users/CanadianHighlanderDatabase/">CanadianHighlanderDatabase</a>
+                            </div>
+                            <div class="contents col-xs-12 col-sm-5">
+                                <div class="row">
+                                    <div class="col-sm-12 hidden-xs">
+                                        <h5 class="deck-wide-header">
+                                            <a href="/mtg-deck-builder/canadian-highlander-decks/">Canadian Highlander</a>
+                                        </h5>
+                                    </div>
+                                    <div class="col-xs-3 visible-xs deck-wide-badge">
+                                        <span class="badge fmt-chl badge-tiny">CHL</span>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-12 hidden-xs">
+                                        <h5 class="deck-wide-header" style="color:gray">
+                                            <a href="/mtg-deck-builder/aggro-decks/">Aggro</a>
+
+                                            |
+                                            <a href="/mtg-deck-builder/death-and-taxes-decks/">Death and Taxes</a>
+
+                                            |
+                                            <a href="/mtg-deck-builder/hatebears-decks/">Hatebears</a>
+
+                                            |
+                                            <a href="/mtg-deck-builder/white-decks/">Mono-White</a>
+                                        </h5>
+                                    </div>
+                                    <div class="col-xs-9 col-sm-12 deck-wide-stats">
+                                        <span class="glyphicon glyphicon-level-up" style="margin:0px -3px 0px 8px"></span>
+                                        4
+
+
+
+
+
+                                        <span class="glyphicon glyphicon-eye-open" style="margin:0px -2px 0px 8px"></span>
+                                        1011
+
+
+                                        <span class="deck-price-range">$$$$</span>
+                                    </div>
+                                    <div class="col-sm-12 hidden-xs">
+                                        <h5 style="color:gray">
+                                            Updated 4 weeks ago.
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="well">
+                        <div class="row">
+                            <div align="center" class="col-sm-2 col-xs-3 col-md-2 col-lg-2 contents deck-wide-chart">
+                                <a href="/mtg-decks/orzhov-hatebears-sample-archetypes/"><img alt="deck chart" class="chart deck-chart" src="//static.tappedout.net/chart/70-0-20-0-5-5.png" /></a>
+                            </div>
+                            <div class="col-sm-5 col-xs-9 col-md-5 col-lg-5 contents">
+                                <h3 class="name deck-wide-header"><a href="/mtg-decks/orzhov-hatebears-sample-archetypes/" title="mtg decks - Orzhov Hatebears - Sample Archetypes">Orzhov Hatebears - Sample Archetypes </a></h3>
+                                <a href="/users/CanadianHighlanderDatabase/">CanadianHighlanderDatabase</a>
+                            </div>
+                            <div class="contents col-xs-12 col-sm-5">
+                                <div class="row">
+                                    <div class="col-sm-12 hidden-xs">
+                                        <h5 class="deck-wide-header">
+                                            <a href="/mtg-deck-builder/canadian-highlander-decks/">Canadian Highlander</a>
+                                        </h5>
+                                    </div>
+                                    <div class="col-xs-3 visible-xs deck-wide-badge">
+                                        <span class="badge fmt-chl badge-tiny">CHL</span>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-12 hidden-xs">
+                                        <h5 class="deck-wide-header" style="color:gray">
+                                            <a href="/mtg-deck-builder/aggro-decks/">Aggro</a>
+
+                                            |
+                                            <a href="/mtg-deck-builder/death-and-taxes-decks/">Death and Taxes</a>
+
+                                            |
+                                            <a href="/mtg-deck-builder/hatebears-decks/">Hatebears</a>
+
+                                            |
+                                            <a href="/mtg-deck-builder/midrange-decks/">Midrange</a>
+
+                                            |
+                                            <a href="/mtg-deck-builder/wb-decks/">W/B (Orzhov)</a>
+                                        </h5>
+                                    </div>
+                                    <div class="col-xs-9 col-sm-12 deck-wide-stats">
+                                        <span class="glyphicon glyphicon-level-up" style="margin:0px -3px 0px 8px"></span>
+                                        2
+
+
+
+
+                                        <span class="glyphicon glyphicon-comment" style="margin:0px 0px 0px 8px"></span>
+                                        1
+
+
+
+                                        <span class="glyphicon glyphicon-eye-open" style="margin:0px -2px 0px 8px"></span>
+                                        1068
+
+
+                                        <span class="deck-price-range">$$$$$</span>
+                                    </div>
+                                    <div class="col-sm-12 hidden-xs">
+                                        <h5 style="color:gray">
+                                            Updated 4 weeks ago.
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="well">
+                        <div class="row">
+                            <div align="center" class="col-sm-2 col-xs-3 col-md-2 col-lg-2 contents deck-wide-chart">
+                                <a href="/mtg-decks/gruul-aggro-sample-archetypes/"><img alt="deck chart" class="chart deck-chart" src="//static.tappedout.net/chart/5-0-5-50-40.png" /></a>
+                            </div>
+                            <div class="col-sm-5 col-xs-9 col-md-5 col-lg-5 contents">
+                                <h3 class="name deck-wide-header"><a href="/mtg-decks/gruul-aggro-sample-archetypes/" title="mtg decks - Gruul Aggro - Sample Archetypes">Gruul Aggro - Sample Archetypes </a></h3>
+                                <a href="/users/CanadianHighlanderDatabase/">CanadianHighlanderDatabase</a>
+                            </div>
+                            <div class="contents col-xs-12 col-sm-5">
+                                <div class="row">
+                                    <div class="col-sm-12 hidden-xs">
+                                        <h5 class="deck-wide-header">
+                                            <a href="/mtg-deck-builder/canadian-highlander-decks/">Canadian Highlander</a>
+                                        </h5>
+                                    </div>
+                                    <div class="col-xs-3 visible-xs deck-wide-badge">
+                                        <span class="badge fmt-chl badge-tiny">CHL</span>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-12 hidden-xs">
+                                        <h5 class="deck-wide-header" style="color:gray">
+                                            <a href="/mtg-deck-builder/aggro-decks/">Aggro</a>
+
+                                            |
+                                            <a href="/mtg-deck-builder/rg-decks/">RG (Gruul)</a>
+
+                                            |
+                                            <a href="/mtg-deck-builder/zoo-decks/">Zoo</a>
+                                        </h5>
+                                    </div>
+                                    <div class="col-xs-9 col-sm-12 deck-wide-stats">
+                                        <span class="glyphicon glyphicon-level-up" style="margin:0px -3px 0px 8px"></span>
+                                        2
+
+
+                                        <span class="glyphicon glyphicon-arrow-up" style="margin:0px -3px 0px 6px"></span>
+                                        1
+
+
+
+
+
+                                        <span class="glyphicon glyphicon-eye-open" style="margin:0px -2px 0px 8px"></span>
+                                        1011
+
+
+                                        <span class="deck-price-range">$$$$</span>
+                                    </div>
+                                    <div class="col-sm-12 hidden-xs">
+                                        <h5 style="color:gray">
+                                            Updated 4 weeks ago.
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <input id="id_page" name="page" type="hidden" value="8" />
+                    </input>
+                </form>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ul class="pagination">
+                            <li><a href="?&amp;p=1&amp;page=1">Page 1</a></li>
+                            <li><a href="?&amp;p=2&amp;page=2">2</a></li>
+                            <li><a href="?&amp;p=3&amp;page=3">3</a></li>
+                            <li><a href="#">...</a></li>
+                            <li><a href="?&amp;p=5&amp;page=5">5</a></li>
+                            <li><a href="?&amp;p=6&amp;page=6">6</a></li>
+                            <li><a href="?&amp;p=7&amp;page=7">7</a></li>
+                            <li class="active"><a href="?&amp;p=8&amp;page=8">8</a></li>
+                            <li><a href="?&amp;p=9&amp;page=9">9</a></li>
+                            <li><a href="?&amp;p=10&amp;page=10">10</a></li>
+                            <li><a href="#">...</a></li>
+                            <li><a href="?&amp;p=57&amp;page=57">57</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal fade" id="filter" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-remove"></span></button>
+                                <h4 class="modal-title">Filter</h4>
+                            </div>
+                            <div class="modal-body">
+                                <form action="." method="get">
+                                    <div class="form-group"><label class="control-label" for="id_o">Order</label><select class="form-control" id="id_o" name="o" title="">
+                                            <option value="date_updated">Date updated</option>
+                                        </select></div>
+                                    <div class="form-group"><label class="control-label" for="id_is_private">Is private</label><select class="form-control" id="id_is_private" name="is_private" title="">
+                                            <option selected="" value="">--</option>
+                                            <option value="False">False</option>
+                                            <option value="True">True</option>
+                                        </select></div>
+                                    <div class="form-group"><label class="control-label" for="id_is_archived">Is archived</label><select class="form-control" id="id_is_archived" name="is_archived" title="">
+                                            <option selected="" value="">--</option>
+                                            <option value="False">False</option>
+                                            <option value="True">True</option>
+                                        </select></div>
+                                    <div class="form-group"><label class="control-label" for="id_format">Format</label><select class="form-control" id="id_format" name="format" title="">
+                                            <option selected="" value="">--</option>
+                                            <option value="34">Canadian Highlander</option>
+                                        </select></div>
+                                    <hr />
+                                    <p><input class="btn pull-right" name="submit" type="submit" value="Submit" /></p>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid hidden-xs">
+                <div class="row">
+                    <div style="text-align:center;">
+                        <div class="text-center" id="div-gpt-ad-1491787755236-4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="jumbotron top-divider invisible" id="footer">
+            <div class="container">
+                <p>Magic the Gathering, FNM is TM and copyright Wizards of the Coast, Inc, a subsidiary of Hasbro, Inc. All rights reserved. This site is <em>unaffiliated</em>. Articles and comments are user-submitted and do not represent official endorsements of this site.</p>
+                <p>
+                    This site © 2019 TappedOut.net, LLC
+                    <a href="/feedback/">Contact</a> |
+                    <a href="/feeds/">Feeds</a> |
+                    <a href="/help-desk/">Help</a> |
+                    <a href="/changelog/">Changelog</a><small> (updated 1 year ago)</small> |
+                    <a href="/terms-of-use/">Terms of Use</a> |
+                    <a href="/privacy-statement/">Privacy statement</a> |
+                    <a href="/dmca-requests/">DMCA requests</a> |
+                    <a href="https://discord.gg/pkEp65z">Discord Server</a> |
+                    <a href="http://tappedroyale.net">Clash Royale Deck Builder</a>
+                </p>
+            </div>
+        </div>
+        <script type="text/javascript">
+            var _sf_async_config = {
+                uid: 38612,
+                domain: "tappedout.net"
+            };
+            (function() {
+                function loadChartbeat() {
+                    window._sf_endpt = (new Date()).getTime();
+                    var e = document.createElement('script');
+                    e.setAttribute('language', 'javascript');
+                    e.setAttribute('type', 'text/javascript');
+                    e.setAttribute('src',
+                        (("https:" == document.location.protocol) ? "https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/" : "http://static.chartbeat.com/") +
+                        "js/chartbeat.js");
+                    document.body.appendChild(e);
+                }
+                var oldonload = window.onload;
+                window.onload = (typeof window.onload != 'function') ?
+                    loadChartbeat : function() {
+                        oldonload();
+                        loadChartbeat();
+                    };
+            })();
+        </script>
+        <script type="text/javascript">
+            function changeBodyPadding() {
+                var footerHeight = $("#footer").outerHeight() + 20;
+                $("#body").css("padding-bottom", footerHeight + "px");
+            }
+            // Set div#body padding on load
+            $(window).ready(function(e) {
+                changeBodyPadding();
+                $("#footer").removeClass("invisible");
+            });
+            // Set body padding on resize (for responsive purposes)
+            $(window).resize(function(e) {
+                changeBodyPadding();
+            });
+            $(window).ready(function(e) {
+                window.setCommentsEditor();
+            });
+        </script>
+        <script id="card-hover-template-mobile" type="text/x-handlebars-template">
+
+
+            <div class="modal" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-7">
+                                        <a class="btn btn-block btn-danger" data-dismiss="modal" class="close" aria-label="close">Close</a>
+                                        <div style="position:relative;width:240px;margin:10px 0px 10px 0px">
+                                            <a href="{{ url }}">
+                                                {{#if data.foil }}
+                                                <div style="position:absolute;z-index:1000;width:82%;height:100%;margin-left:21px;background-image:url('{{ STATIC_URL }}/img/foil-card-overlay-2.png');background-size:cover"></div>
+                                                {{/if}}
+                                                <div style="position:relative;display:block;overflow:hidden;width:100% !important;">
+                                                    <img src="{{ data.image }}" style="margin:0 auto;" class="img-responsive screen card-popover" alt="{{ settings.TCG.NAME }} Card: {{ data.name }}"/>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-5">
+                                        <a class="btn btn-primary btn-block" href="{{ url }}">Visit page</a>
+                                        {{#if data.showPrice }}
+                                        {{#each vendors}}
+                                        <a class="btn btn-block btn-warning" href="{{ this.url }}">{{ this.name }} {{ this.price }}</a>
+                                        {{/each}}
+                                        <a class="btn btn-success btn-block" href="{{ url }}#priceModal">Set Price Alert</a>
+                                        {{/if}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </script>
+        <script id="card-hover-template" type="text/x-handlebars-template">
+
+            <div style="position:relative;width:220px;">
+                    {{#if data.foil }}
+                    <div style="position:absolute;z-index:1000;width:100%;height:100%;background-image:url('{{ STATIC_URL }}/img/foil-card-overlay-2.png');background-size:cover"></div>
+                    {{/if}}
+                    <div style="position:relative;display:block;overflow:hidden;width:100% !important;">
+                        <img src="{{ data.image }}" style="margin:0 auto;" class="img-responsive screen card-popover" alt="{{ settings.TCG.NAME }} Card: {{ data.name }}"/>
+                        <p style="font-size:12px">
+                            {{#if data.showPrice }}
+                            {{#each vendors}}
+                            <b>{{ this.name }}</b> {{ this.price }} {{#if this.next }} | {{/if}}
+                            {{/each}}
+                            {{/if}}
+                        </p>
+                    </div>
+                </div>
+            
+            </script>
+        <ul class="hide mana-symbol-menu" id="mana-symbol-menu" style="position:absolute;">
+            <li class="mana-menu mana-symbol-button" data-mana="B"><span class="mana-symbol-sprite mana-b"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="G"><span class="mana-symbol-sprite mana-g"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="R"><span class="mana-symbol-sprite mana-r"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="U"><span class="mana-symbol-sprite mana-u"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="W"><span class="mana-symbol-sprite mana-w"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="0"><span class="mana-symbol-sprite mana-0"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="1"><span class="mana-symbol-sprite mana-1"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="2"><span class="mana-symbol-sprite mana-2"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="3"><span class="mana-symbol-sprite mana-3"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="4"><span class="mana-symbol-sprite mana-4"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="5"><span class="mana-symbol-sprite mana-5"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="6"><span class="mana-symbol-sprite mana-6"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="7"><span class="mana-symbol-sprite mana-7"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="8"><span class="mana-symbol-sprite mana-8"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="9"><span class="mana-symbol-sprite mana-9"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="10"><span class="mana-symbol-sprite mana-10"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="11"><span class="mana-symbol-sprite mana-11"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="12"><span class="mana-symbol-sprite mana-12"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="13"><span class="mana-symbol-sprite mana-13"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="14"><span class="mana-symbol-sprite mana-14"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="15"><span class="mana-symbol-sprite mana-15"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="16"><span class="mana-symbol-sprite mana-16"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="17"><span class="mana-symbol-sprite mana-17"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="18"><span class="mana-symbol-sprite mana-18"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="19"><span class="mana-symbol-sprite mana-19"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="20"><span class="mana-symbol-sprite mana-20"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="X"><span class="mana-symbol-sprite mana-x"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="y"><span class="mana-symbol-sprite mana-y"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="z"><span class="mana-symbol-sprite mana-z"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="infinite"><span class="mana-symbol-sprite mana-infinite"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="BG"><span class="mana-symbol-sprite mana-bg"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="GW"><span class="mana-symbol-sprite mana-gw"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="RG"><span class="mana-symbol-sprite mana-rg"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="UR"><span class="mana-symbol-sprite mana-ur"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="WB"><span class="mana-symbol-sprite mana-wb"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="BR"><span class="mana-symbol-sprite mana-br"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="GU"><span class="mana-symbol-sprite mana-gu"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="RW"><span class="mana-symbol-sprite mana-rw"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="UB"><span class="mana-symbol-sprite mana-ub"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="WU"><span class="mana-symbol-sprite mana-wu"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="2B"><span class="mana-symbol-sprite mana-2b"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="2G"><span class="mana-symbol-sprite mana-2g"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="2R"><span class="mana-symbol-sprite mana-2r"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="2U"><span class="mana-symbol-sprite mana-2u"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="2W"><span class="mana-symbol-sprite mana-2w"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="PB"><span class="mana-symbol-sprite mana-pb"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="PG"><span class="mana-symbol-sprite mana-pg"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="PR"><span class="mana-symbol-sprite mana-pr"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="PU"><span class="mana-symbol-sprite mana-pu"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="PW"><span class="mana-symbol-sprite mana-pw"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="C"><span class="mana-symbol-sprite mana-c"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="energy"><span class="mana-symbol-sprite mana-energy"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="t"><span class="mana-symbol-sprite mana-t"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="ut"><span class="mana-symbol-sprite mana-ut"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="snow"><span class="mana-symbol-sprite mana-snow"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="saga-1"><span class="mana-symbol-sprite mana-symbol-hexa mana-saga-1"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="saga-2"><span class="mana-symbol-sprite mana-symbol-hexa mana-saga-2"></span></li>
+            <li class="mana-menu mana-symbol-button" data-mana="saga-3"><span class="mana-symbol-sprite mana-symbol-hexa mana-saga-3"></span></li>
+        </ul>
+    </div>
+</body>
+
+</html>
+​

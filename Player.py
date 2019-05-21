@@ -4,6 +4,7 @@ import csv
 import math
 from pymongo import MongoClient
 from mtgsdk import Card
+import math
 
 client = MongoClient("localhost", 27017)
 db = client["cubeRank"]
@@ -22,18 +23,18 @@ class Player():
             'R': 0,
             'G': 0
         }
-        self.arch = {
-            "WU": 0,
-            "UB": 0,
-            "BR": 0,
-            "RG": 0,
-            "GW": 0,
-            "WB": 0,
-            "UR": 0,
-            "BG": 0,
-            "RW": 0,
-            "GU": 0
-        }
+        # self.arch = {
+        #     "WU": 0,
+        #     "UB": 0,
+        #     "BR": 0,
+        #     "RG": 0,
+        #     "GW": 0,
+        #     "WB": 0,
+        #     "UR": 0,
+        #     "BG": 0,
+        #     "RW": 0,
+        #     "GU": 0
+        # }
 
     def setBooster(self, booster):
         self.pickFrom = booster
@@ -50,11 +51,11 @@ class Player():
         for color in self.colorR:
             self.colorR[color] -= avr
         total = 0
-        for arch in self.arch:
-            total += self.arch[arch]
-        avr = total/10
-        for arch in self.arch:
-            self.arch[arch] -= avr
+        # for arch in self.arch:
+        #     total += self.arch[arch]
+        # avr = total/10
+        # for arch in self.arch:
+        #     self.arch[arch] -= avr
 
 
     def inputPick(self, cardIndex):
@@ -62,12 +63,14 @@ class Player():
         self.pickFrom.remove(self.pickFrom[cardIndex])
 
     def updateAdders(self, recentPick, recentRank):
-        color = recentPick.get('manaCost', '')
+        color = recentPick.get('mana_cost')
+        if(color == None):
+            color = '{0}'
         for pip in color:
             if(pip in self.colorR):
-                self.colorR[pip] += recentRank * 0.04;
+                self.colorR[pip] += recentRank/75
 
-        # TODO: add archetypes somewhere
+        # TODO: add archetypes somewhere somehow
         # for arch in rankings['archetypes']:
         #     for i in arch:
         #         if(i in recentPick.get('text', '')):
@@ -75,8 +78,7 @@ class Player():
 
     def addScore(self, card):
         rankAdding = 0
-
-        curColor = card.get('colorIdentity', 'c')
+        curColor = card.get('color_identity', ['C'])
         for color in curColor:
             if(color in self.colorR):
                 rankAdding += self.colorR[color]
@@ -91,17 +93,19 @@ class Player():
 
     def pick(self):
         best = self.pickFrom[0]
-        print(best)
         cur = self.pickFrom[0]
-        bestRank = db.cards.find_one({'Name':best.name})
+        bestRank = float(db.cards.find_one({'Name':best['name']})['Pick Percentage'])
+        bestWOAdders = bestRank
         for cur in self.pickFrom:
-            curRank = db.cards.find_one({'Name':cur.name})
+            curRank = float(db.cards.find_one({'Name':cur['name']})['Pick Percentage'])
+            curWOAdders = curRank
             curRank += self.addScore(cur)
             if(curRank >= bestRank):
                 best = cur
                 bestRank = curRank
+                bestWOAdders = curWOAdders
 
-        self.updateAdders(best, bestRank)
+        self.updateAdders(best, bestWOAdders)
 
 
         self.pickFrom.remove(best)
